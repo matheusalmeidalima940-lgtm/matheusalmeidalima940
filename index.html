@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f45b2a">
+  <meta name="description" content="Peça seus pratos favoritos com praticidade. Confira o cardápio, monte seu pedido e receba em casa.">
+  <title>Entregaê — Seu delivery favorito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span>✦</span> Peça agora e receba no conforto da sua casa <span>✦</span></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Entregaê - início"><span class="brand-mark">e<span>!</span></span><span>entrega<span class="brand-accent">ê</span></span></a>
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a href="#cardapio">Cardápio</a><a href="#ofertas">Ofertas</a><a href="#como-funciona">Como funciona</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" id="search-toggle" aria-label="Abrir busca">⌕</button>
+      <button class="cart-button" id="open-cart"><span class="cart-icon">🛍</span><span class="cart-label">Meu pedido</span><b id="cart-count">0</b></button>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> SEU DIA MAIS GOSTOSO</span>
+        <h1>Fome de coisa boa? <em>A gente entrega.</em></h1>
+        <p>Seu prato favorito, preparado com carinho e chegando quentinho até você. É só escolher e aproveitar!</p>
+        <div class="hero-actions"><a class="primary-button" href="#cardapio">Ver cardápio <span>→</span></a><span class="delivery-note">⚡ Entrega rápida e segura</span></div>
+        <div class="hero-proof"><div class="avatars"><span>😊</span><span>😋</span><span>😍</span></div><div><strong>+ de 2 mil pedidos</strong><small>Clientes felizes e satisfeitos</small></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-blob"></div>
+        <img class="hero-food" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=85" alt="Hambúrguer artesanal com queijo e salada">
+        <div class="floating-card rating-card"><span>⭐</span><div><strong>4,9/5</strong><small>Avaliação dos clientes</small></div></div>
+        <div class="floating-card delivery-card"><span>🛵</span><div><strong>30–45 min</strong><small>Tempo médio de entrega</small></div></div>
+        <span class="hero-spark spark-one">✳</span><span class="hero-spark spark-two">✦</span>
+      </div>
+    </section>
+    <section class="benefits" aria-label="Vantagens">
+      <div><span>🛵</span><p><strong>Entrega rápida</strong><small>Seu pedido sem demora</small></p></div>
+      <div><span>🥬</span><p><strong>Ingredientes frescos</strong><small>Qualidade em cada mordida</small></p></div>
+      <div><span>💳</span><p><strong>Pagamento fácil</strong><small>Praticidade para você</small></p></div>
+      <div><span>💛</span><p><strong>Feito com carinho</strong><small>Sabor que dá vontade</small></p></div>
+    </section>
+    <section class="menu-section section-wrap" id="cardapio">
+      <div class="section-heading"><div><span class="eyebrow">ESCOLHA SEU FAVORITO</span><h2>O que vai ser <em>hoje?</em></h2></div><p>Opções deliciosas para matar sua fome.</p></div>
+      <div class="search-panel" id="search-panel"><input id="search-input" type="search" placeholder="Buscar no cardápio..." aria-label="Buscar produtos"><button id="clear-search" aria-label="Limpar busca">×</button></div>
+      <div class="category-list" id="categories" aria-label="Categorias"></div>
+      <div class="product-grid" id="product-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>Nenhum item encontrado. Tente outra busca.</p>
+    </section>
+    <section class="offer-section" id="ofertas">
+      <div class="offer-copy"><span class="eyebrow light">OFERTA ESPECIAL</span><h2>Seu combo favorito com <em>preço de amigo!</em></h2><p>Junte sabor e economia. Aproveite nossas ofertas e deixe seu dia ainda melhor.</p><a href="#cardapio" class="light-button">Aproveitar ofertas <span>→</span></a></div>
+      <div class="offer-art"><span class="offer-sticker">BOM<br>DEMAIS!</span><img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=85" alt="Combo de hambúrguer e batatas fritas"></div>
+    </section>
+    <section class="how-section section-wrap" id="como-funciona">
+      <div class="section-heading centered"><div><span class="eyebrow">É MUITO SIMPLES</span><h2>Do nosso balcão <em>até você</em></h2></div><p>Três passos para uma experiência deliciosa.</p></div>
+      <div class="steps">
+        <article><span class="step-number">01</span><div class="step-icon">🍔</div><h3>Escolha seus pratos</h3><p>Explore o cardápio e adicione seus favoritos ao pedido.</p></article>
+        <article><span class="step-number">02</span><div class="step-icon">🛍️</div><h3>Monte seu pedido</h3><p>Confira seu carrinho e envie tudo para a gente pelo WhatsApp.</p></article>
+        <article><span class="step-number">03</span><div class="step-icon">🛵</div><h3>Receba e aproveite</h3><p>Combine a entrega e prepare-se para uma refeição especial.</p></article>
+      </div>
+    </section>
+    <section class="bottom-cta"><div><span class="eyebrow light">BATEU AQUELA FOME?</span><h2>A felicidade pode chegar<br>em uma sacola. <em>Peça já!</em></h2></div><a class="light-button" href="#cardapio">Fazer meu pedido →</a></section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">e<span>!</span></span><span>entrega<span class="brand-accent">ê</span></span></a><p>Comida boa, momentos melhores. 💛</p><div class="footer-meta"><span>© <span id="year"></span> Entregaê. Todos os direitos reservados.</span><a href="#como-funciona">Como funciona</a></div></footer>
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Meu pedido" aria-hidden="true">
+    <div class="drawer-header"><div><span class="eyebrow">SUA SELEÇÃO</span><h2>Meu pedido <span id="drawer-count">(0)</span></h2></div><button class="close-button" id="close-cart" aria-label="Fechar carrinho">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span>🛍️</span><h3>Seu carrinho está vazio</h3><p>Escolha algo gostoso no cardápio para começar.</p><button class="primary-button" id="browse-menu">Ver cardápio →</button></div>
+    <div class="cart-footer" id="cart-footer" hidden><div class="subtotal-line"><span>Subtotal</span><strong id="cart-subtotal">R$ 0,00</strong></div><div class="subtotal-line"><span>Entrega</span><span id="delivery-fee">A combinar</span></div><div class="total-line"><span>Total parcial</span><strong id="cart-total">R$ 0,00</strong></div><p class="checkout-hint">A taxa e o prazo de entrega serão confirmados pelo WhatsApp.</p><button class="checkout-button" id="checkout">Finalizar pelo WhatsApp <span>↗</span></button></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
