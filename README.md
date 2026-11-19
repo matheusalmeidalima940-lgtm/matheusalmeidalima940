@@ -1,21 +1,39 @@
-# Delivery — Loja online
+# Patinhas do Bem — Campanha de doação pet
 
-Landing page responsiva para pedidos de delivery, feita com HTML, CSS e JavaScript puro.
+Landing page responsiva para apresentar uma campanha de apoio a cães e gatos e orientar doações via Pix.
+
+## Estrutura
+
+- `index.html` — conteúdo da página
+- `css/style.css` — identidade visual e responsividade
+- `js/app.js` — seleção de valores e cópia da chave Pix
+- `assets/` — imagens próprias/licenciadas da campanha
 
 ## Como executar
 
-Abra `index.html` no navegador ou publique o repositório no GitHub Pages.
+Abra `index.html` no navegador. Não é necessário instalar dependências.
 
-## Recursos
+## Configuração obrigatória antes de divulgar
 
-- Catálogo com categorias e busca
-- Produtos em destaque e ofertas
-- Carrinho com alteração de quantidades e subtotal
-- Finalização do pedido pelo WhatsApp
-- Layout responsivo para celular e desktop
+Edite o objeto `CAMPAIGN` no início de `js/app.js`:
 
-## Configuração
+- `pixKey`: chave Pix verdadeira e autorizada pelo responsável.
+- `pixOwner`: nome do titular/beneficiário para conferência.
+- `whatsapp`: contato oficial, se desejado.
+- `goal`: meta real da campanha, caso seja divulgada.
 
-Edite `WHATSAPP_NUMBER` em `js/app.js` com o número da loja no formato internacional, apenas números (ex.: 5511999999999). Atualize também os dados, produtos, preços e taxa de entrega no mesmo arquivo.
+A chave Pix aparece na página e pode ser copiada. O site não recebe, processa nem confirma pagamentos. O doador deve conferir o nome do destinatário no aplicativo bancário antes de transferir.
 
-As imagens do catálogo são carregadas de fontes externas; substitua os links por imagens próprias antes de publicar comercialmente.
+## Transparência e uso responsável
+
+- Identifique claramente a pessoa ou organização responsável pela arrecadação.
+- Explique finalidade, período e destinação das contribuições.
+- Publique comprovantes e atualizações reais, preservando dados pessoais.
+- Não apresente metas, números ou resultados ilustrativos como fatos reais.
+- Obtenha autorização para utilizar imagens e informações dos animais.
+
+As imagens atuais são referências externas do Unsplash. Para produção, prefira fotos autorizadas salvas em `assets/` e atualize os caminhos no HTML.
+
+## Publicação
+
+Pode ser publicado no GitHub Pages usando a branch `main` e a pasta raiz.
