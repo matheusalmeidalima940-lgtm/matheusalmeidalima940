@@ -5,7 +5,9 @@ const CAMPAIGN = {
   whatsapp: "",
   goal: 10000
 };
-let selectedAmount = 25;
+const MIN_AMOUNT = 20;
+const MAX_AMOUNT = 1000;
+let selectedAmount = 20;
 const amountButtons = document.querySelectorAll(".amount-option");
 const customAmount = document.querySelector("#custom-amount");
 const pixKey = document.querySelector("#pix-key");
@@ -39,8 +41,8 @@ document.querySelector("#copy-pix").addEventListener("click", async () => {
     showToast("A chave Pix oficial ainda precisa ser configurada.");
     return;
   }
-  if (!Number.isFinite(selectedAmount) || selectedAmount <= 0) {
-    showToast("Escolha um valor de doação válido.");
+  if (!Number.isFinite(selectedAmount) || selectedAmount < MIN_AMOUNT || selectedAmount > MAX_AMOUNT) {
+    showToast("Escolha um valor entre R$ 20 e R$ 1.000.");
     customAmount.focus();
     return;
   }
